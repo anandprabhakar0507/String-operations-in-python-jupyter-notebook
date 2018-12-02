@@ -1,0 +1,637 @@
+
+
+
+.. raw:: html
+
+   <h1 align="center">
+
+String Operations
+
+.. raw:: html
+
+   </h1>
+
+
+
+Table of Contents
+-----------------
+
+.. raw:: html
+
+   <div class="alert alert-block alert-info" style="margin-top: 20px">
+
+.. raw:: html
+
+   <li>
+
+Strings
+
+.. raw:: html
+
+   </li>
+
+.. raw:: html
+
+   <li>
+
+Indexing
+
+.. raw:: html
+
+   </li>
+
+.. raw:: html
+
+   <li>
+
+Escape Sequences
+
+.. raw:: html
+
+   </li>
+
+.. raw:: html
+
+   <li>
+
+String Operations
+
+.. raw:: html
+
+   </li>
+
+.. raw:: html
+
+   <li>
+
+Quizz
+
+.. raw:: html
+
+   </li>
+
+.. raw:: html
+
+   <p>
+
+.. raw:: html
+
+   </p>
+
+Estimated Time Needed: 15 min
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <h2 align="center">
+
+Strings
+
+.. raw:: html
+
+   </h2>
+
+A string is contained within 2 quotes:
+
+.. code:: python
+
+    "Michael Jackson"
+
+You can also use single quotes:
+
+.. code:: python
+
+    'Michael Jackson'
+
+A string can be spaces and digits:
+
+.. code:: python
+
+    '1 2 3 4 5 6 '
+
+A string can also be special characters :
+
+.. code:: python
+
+    '@#2_#]&*^%$'
+
+We can print our string using the print statement:
+
+.. code:: python
+
+    print("hello!")
+
+We can bind or assign a string to another variable:
+
+.. code:: python
+
+    Name= "Michael Jackson"
+    Name
+
+.. raw:: html
+
+   <h2 align="center">
+
+Indexing
+
+.. raw:: html
+
+   </h2>
+
+It is helpful to think of a string as an ordered sequence. Each element
+in the sequence can be accessed using an index represented by the array
+of numbers:
+
+
+
+The first index can be accessed as follows:
+
+.. code:: python
+
+    print(Name[13])
+
+We can access index 6:
+
+.. code:: python
+
+    print(Name[6])
+
+Moreover, we can access the 13th index:
+
+.. code:: python
+
+    print(Name[13])
+
+We can also use negative indexing with strings:
+
+
+
+The last element is given by the index -1:
+
+.. code:: python
+
+    print(Name[-1])
+
+The first element can be obtained by index -15:
+
+.. code:: python
+
+    print(Name[-15])
+
+We can find the number of characters in a string by using 'len', short
+for length:
+
+.. code:: python
+
+    len("Michael Jackson")
+
+We can obtain multiple characters from a string using slicing, we can
+obtain the 0 to 4th and 8th to the 12th element:
+
+<img
+src="https://ibm.box.com/shared/static/bva43bmp00cxeunqh4w7blkgniycbign.png"
+width=600,align="center">
+
+.. code:: python
+
+    Name[0:4]
+
+.. code:: python
+
+    Name[8:12]
+
+We can also input a stride value as follows, with the '2' indicating
+that we are selecting every second variable:
+
+<img
+src="https://ibm.box.com/shared/static/f49xvym409rxclhtbr30xrs9kc4l5419.png"
+width=600,align="center">
+
+.. code:: python
+
+    Name[::2]
+
+We can also incorporate slicing with the stride. In this case, we select
+the first five elements and then use the stride:
+
+.. code:: python
+
+    Name[0:5:2]
+
+
+We can concatenate or combine strings by using the addition symbols, and
+the result is a new string that is a combination of both:
+
+.. code:: python
+
+    Statement = Name + "is the best"
+    Statement
+
+To replicate values of a string we simply multiply the string by the
+number of times we would like to replicate it. In this case, the number
+is three. The result is a new string, and this new string consists of
+three copies of the original string:
+
+.. code:: python
+
+    3*"Michael Jackson "
+
+You can create a new string by setting it to the original variable.
+Concatenated with a new string, the result is a new string that changes
+from Michael Jackson to “Michael Jackson is the best".
+
+.. code:: python
+
+    Name= "Michael Jackson"
+    Name= Name+" is the best"
+    Name
+
+
+.. raw:: html
+
+   <h2 align="center">
+
+Escape Sequences
+
+.. raw:: html
+
+   </h2>
+
+Back slashes represent the beginning of escape sequences. Escape
+sequences represent strings that may be difficult to input. For example,
+back slash "n" represents a new line. The output is given by a new line
+after the back slash "n” is encountered:
+
+.. code:: python
+
+    print(" Michael Jackson \n is the best" )
+
+Similarly, back slash "t" represents a tab:
+
+.. code:: python
+
+    print(" Michael Jackson \t is the best" )
+
+If you want to place a back slash in your string, use a double back
+slash:
+
+.. code:: python
+
+    print(" Michael Jackson \\ is the best" )
+
+We can also place an "r" before the string to display the backslash:
+
+.. code:: python
+
+    print(r" Michael Jackson \ is the best" )
+
+.. raw:: html
+
+   <h2 align="center">
+
+String Operations
+
+.. raw:: html
+
+   </h2>
+
+There are many string operation methods in Python that can be used to
+manipulate the data. We are going to use some basic string operations on
+the data.
+
+Let's try with the method "upper"; this method converts upper case
+characters to lower case characters:
+
+.. code:: python
+
+    A="Thriller is the sixth studio album"
+    print("before upper:",A)
+    B=A.upper()
+    print("After upper:",B)
+
+
+
+The method replaces a segment of the string, i.e. a substring with a new
+string. We input the part of the string we would like to change. The
+second argument is what we would like to exchange the segment with, and
+the result is a new string with the segment changed:
+
+.. code:: python
+
+    A="Michael Jackson is the best"
+    B=A.replace('Michael', 'Janet')
+    B
+
+The method "find" finds a sub-string. The argument is the substring you
+would like to find, and the output is the first index of the sequence.
+We can find the sub-string "jack" or "el".
+
+<img
+src="https://ibm.box.com/shared/static/mc414goh1l8jfo9gb19yibuylk8zk7dh.png"
+width=600,align="center">
+
+.. code:: python
+
+    Name="Michael Jackson"
+    Name.find('el')
+
+.. code:: python
+
+    Name.find('Jack')
+
+If the sub-string is not in the string then the output is a negative
+one. For example, the string 'Jasdfasdasdf' is not a substring:
+
+.. code:: python
+
+    Name.find('Jasdfasdasdf')
+
+.. raw:: html
+
+   <h2 align="center">
+
+Quiz on Strings
+
+.. raw:: html
+
+   </h2>
+
+What is the value of the variable "A" after the following code is executed?
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+A="1"
+
+
+.. raw:: html
+
+   <div align="right">
+
+Click here for the solution
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div id="String1" class="collapse">
+
+::
+
+    "1"
+
+.. raw:: html
+
+   </div>
+
+What is the value of the variable "B" after the following code is executed?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+``B="2"``
+
+
+.. raw:: html
+
+   <div align="right">
+
+Click here for the solution
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div id="String2" class="collapse">
+
+::
+
+    "2"
+
+.. raw:: html
+
+   </div>
+
+What is the value of the variable "C" after the following code is executed?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+``C=A+B``
+
+
+.. raw:: html
+
+   <div align="right">
+
+Click here for the solution
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div id="String3" class="collapse">
+
+::
+
+    "12"
+
+.. raw:: html
+
+   </div>
+
+Consider the variable "D": use slicing to print out the first three elements:
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code:: python
+
+    D="ABCDEFG"
+
+
+.. raw:: html
+
+   <div align="right">
+
+Click here for the solution
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div id="String4" class="collapse">
+
+::
+
+    "print(D[:3]) or print(D[0:3])"
+
+.. raw:: html
+
+   </div>
+
+Use a stride value of 2 to print out every second character of the string "E":
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code:: python
+
+    E='clocrkr1e1c1t'
+
+
+.. raw:: html
+
+   <div align="right">
+
+Click here for the solution
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div id="String6" class="collapse">
+
+::
+
+    "print(E[::2])"
+
+.. raw:: html
+
+   </div>
+
+Print out a backslash:
+^^^^^^^^^^^^^^^^^^^^^^
+
+
+.. raw:: html
+
+   <div align="right">
+
+Click here for the solution
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div id="String7" class="collapse">
+
+::
+
+    print(" \\" )
+    or
+    print(r" \ " )
+
+.. raw:: html
+
+   </div>
+
+Convert the variable "F" to uppercase:
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code:: python
+
+    F="You are wrong"
+
+
+.. raw:: html
+
+   <div align="right">
+
+Click here for the solution
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div id="String8" class="collapse">
+
+::
+
+    F.upper()
+
+.. raw:: html
+
+   </div>
+
+Consider the variable "G", and find the first index of the sub-string 'snow':
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code:: python
+
+    G="Mary had a little lamb Little lamb, little lamb Mary had a little lamb \
+    Its fleece was white as snow And everywhere that Mary went Mary went, Mary went \
+    Everywhere that Mary went The lamb was sure to go"
+
+
+.. raw:: html
+
+   <div align="right">
+
+Click here for the solution
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div id="String9" class="collapse">
+
+::
+
+    G.find('snow')
+
+.. raw:: html
+
+   </div>
+
+In the variable "G", replace the sub-string Mary with "Bob":
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+.. raw:: html
+
+   <div align="right">
+
+Click here for the solution
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div id="String10" class="collapse">
+
+::
+
+    G.replace("Mary","Bob")
+
+.. raw:: html
+
+   </div>
+
+
+
+About the Authors:
+==================
+
+`Joseph
+Santarcangelo <https://www.linkedin.com/in/joseph-s-50398b136/>`__ has a
+PhD in Electrical Engineering, his research focused on using machine
+learning, signal processing, and computer vision to determine how videos
+impact human cognition. Joseph has been working for IBM since he
+completed his PhD.
+
